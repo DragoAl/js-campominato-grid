@@ -40,6 +40,8 @@
     height: calc(100% / 10);
     border: 2px solid black;
     cursor: pointer;
+    text-align: center;
+    line-height: 80px;
 }
 
 .square-med {
@@ -48,6 +50,8 @@
     height: calc(100% / 9);
     border: 2px solid black;
     cursor: pointer;
+    text-align: center;
+    line-height: 88px;
 }
 
 .square-hard {
@@ -56,6 +60,8 @@
     height: calc(100% / 7);
     border: 2px solid black;
     cursor: pointer;
+    text-align: center;
+    line-height: 115px;
 }
 
 .square-easy.clicked-true {

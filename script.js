@@ -22,45 +22,51 @@ const btnHard = document.getElementById("hard-btn");
 // l'altro click all'interno del primo serve per assegnare una classa che cambi il colore di sfondo al click dell'utente
 btnEasy.addEventListener("click",
     function() {
-        for (let i = 0; i < 100; i++) {
+        for (let i = 1; i <= 100; i++) {
             let newElement = elementGenerator ("div" , "square-easy");
 
             newElement.addEventListener("click",
                 function() {
                     this.classList.add("clicked-true");
+                    newElement.append(i); 
                 }
             );
-            gridCont.append(newElement);       
+            gridCont.append(newElement); 
+                   
         }
     }
 );
 
 btnMed.addEventListener("click",
     function() {
-        for (let i = 0; i < 81; i++) {
+        for (let i = 1; i <= 81; i++) {
             let newElement = elementGenerator ("div" , "square-med");
 
             newElement.addEventListener("click",
                 function() {
                     this.classList.add("clicked-true");
+                    newElement.append(i);  
                 }
             );
-            gridCont.append(newElement);       
+            gridCont.append(newElement);  
+               
         }
     }
 );
 
 btnHard.addEventListener("click",
     function() {
-        for (let i = 0; i < 49; i++) {
+        for (let i = 1; i <= 49; i++) {
             let newElement = elementGenerator ("div" , "square-hard");
 
             newElement.addEventListener("click",
                 function() {
                     this.classList.add("clicked-true");
+                    newElement.append(i);  
                 }
             );
-            gridCont.append(newElement);       
+            gridCont.append(newElement);  
+                 
         }
     }
 );

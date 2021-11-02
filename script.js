@@ -11,3 +11,62 @@
 // 1.1 ATTRAVERSO IL CLICK SU DEI BOTTONI VIENE SCELTO IL LV.
 // 2.IL CLICK COMPORTA L'ITERAZIONE DI UN CICLO A SECONDA DELLE CELLE SCELTE
 // 2.1 SEMPRE AL CLICK SARA' AGGIUNTA UNA CLASSE PER IDENTIFICARE LE CELLE GIà SELEZIONATE
+
+const gridCont = document.getElementById("container");
+const btnEasy = document.getElementById("easy-btn");
+const btnMed = document.getElementById("med-btn");
+const btnHard = document.getElementById("hard-btn");
+
+// selezionato il lv il click itera il ciclo for per il numero di elementi a seconda della difficoltà.
+// creandoli e inserendoli in griglia
+// l'altro click all'interno del primo serve per assegnare una classa che cambi il colore di sfondo al click dell'utente
+btnEasy.addEventListener("click",
+    function() {
+        for (let i = 0; i < 100; i++) {
+            let newElement = elementGenerator ("div" , "square-easy");
+
+            newElement.addEventListener("click",
+                function() {
+                    this.classList.add("clicked-true");
+                }
+            );
+            gridCont.append(newElement);       
+        }
+    }
+);
+
+btnMed.addEventListener("click",
+    function() {
+        for (let i = 0; i < 81; i++) {
+            let newElement = elementGenerator ("div" , "square-med");
+
+            newElement.addEventListener("click",
+                function() {
+                    this.classList.add("clicked-true");
+                }
+            );
+            gridCont.append(newElement);       
+        }
+    }
+);
+
+btnHard.addEventListener("click",
+    function() {
+        for (let i = 0; i < 49; i++) {
+            let newElement = elementGenerator ("div" , "square-hard");
+
+            newElement.addEventListener("click",
+                function() {
+                    this.classList.add("clicked-true");
+                }
+            );
+            gridCont.append(newElement);       
+        }
+    }
+);
+
+
+
+
+
+
